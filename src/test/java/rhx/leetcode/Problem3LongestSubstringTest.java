@@ -20,7 +20,7 @@ class Problem3LongestSubstringTest {
         int expected = 3;
         String input = "abcabcbb";
         int result = sut.lengthOfLongestSubstring(input);
-        Assertions.assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -28,7 +28,7 @@ class Problem3LongestSubstringTest {
         int expected = 1;
         String input = "bbbbb";
         int result = sut.lengthOfLongestSubstring(input);
-        Assertions.assertEquals(result, expected);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -36,7 +36,15 @@ class Problem3LongestSubstringTest {
         int expected = 3;
         String input = "pwwkew";
         int result = sut.lengthOfLongestSubstring(input);
-        Assertions.assertEquals(result, expected);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testLengthOfLongestSubstring4() {
+        int expected = 2;
+        String input = "aab";
+        int result = sut.lengthOfLongestSubstring(input);
+        assertEquals(expected, result);
     }
 
 }
