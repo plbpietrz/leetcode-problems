@@ -1,17 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems310to319;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Problem312BurstBalloonsTest {
+class P312BurstBalloonsTest {
 
-    private Problem312BurstBalloons sut;
+    private P312BurstBalloons sut;
 
     @BeforeEach
     public void setup() {
-        sut = new Problem312BurstBalloons();
+        sut = new P312BurstBalloons();
     }
 
     @Test

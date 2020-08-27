@@ -1,17 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems210to219;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Problem215KthLargesElementInArrayTest {
+class P215KthLargesElementInArrayTest {
 
-    private Problem215KthLargesElementInArray sut;
+    private P215KthLargesElementInArray sut;
 
     @BeforeEach
     public void setup() {
-        sut = new Problem215KthLargesElementInArray();
+        sut = new P215KthLargesElementInArray();
     }
 
     @Test

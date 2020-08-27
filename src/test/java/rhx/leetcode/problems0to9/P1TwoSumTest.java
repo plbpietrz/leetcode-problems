@@ -1,17 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems0to9;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class Problem1TwoSumTest {
+class P1TwoSumTest {
 
-    Problem1TwoSum sut;
+    P1TwoSum sut;
 
     @BeforeEach
     public void setUp() {
-        sut = new Problem1TwoSum();
+        sut = new P1TwoSum();
     }
 
     @Test

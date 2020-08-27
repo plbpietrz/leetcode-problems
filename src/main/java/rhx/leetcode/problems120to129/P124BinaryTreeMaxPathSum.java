@@ -1,9 +1,11 @@
-package rhx.leetcode;
+package rhx.leetcode.problems120to129;
+
+import rhx.leetcode.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Problem124BinaryTreeMaxPathSum {
+public class P124BinaryTreeMaxPathSum {
 
     public int maxPathSum(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();

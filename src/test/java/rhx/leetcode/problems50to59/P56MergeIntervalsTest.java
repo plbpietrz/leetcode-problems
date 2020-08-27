@@ -1,18 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems50to59;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class Problem56MergeIntervalsTest {
+class P56MergeIntervalsTest {
 
-    private Problem56MergeIntervals sut;
+    private P56MergeIntervals sut;
 
     @BeforeEach
     public void setup() {
-        sut = new Problem56MergeIntervals();
+        sut = new P56MergeIntervals();
     }
 
     @Test

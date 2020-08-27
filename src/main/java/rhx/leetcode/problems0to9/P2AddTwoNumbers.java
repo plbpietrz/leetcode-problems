@@ -1,6 +1,8 @@
-package rhx.leetcode;
+package rhx.leetcode.problems0to9;
 
-public class Problem2AddTwoNumbers {
+import rhx.leetcode.ListNode;
+
+public class P2AddTwoNumbers {
 
     /**
      * Definition for singly-linked list.

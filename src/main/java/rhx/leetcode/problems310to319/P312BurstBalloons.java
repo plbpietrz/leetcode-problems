@@ -1,6 +1,6 @@
-package rhx.leetcode;
+package rhx.leetcode.problems310to319;
 
-public class Problem312BurstBalloons {
+public class P312BurstBalloons {
 
     public int maxCoins(int[] nums) {
         if (nums.length == 0) return 0;

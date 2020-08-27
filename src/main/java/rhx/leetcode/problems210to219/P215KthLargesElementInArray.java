@@ -1,8 +1,8 @@
-package rhx.leetcode;
+package rhx.leetcode.problems210to219;
 
 import java.util.PriorityQueue;
 
-public class Problem215KthLargesElementInArray {
+public class P215KthLargesElementInArray {
 
     public int findKthLargest(int[] nums, int k) {
         if (nums.length == 1 && k == 1) return nums[0];

@@ -1,10 +1,12 @@
-package rhx.leetcode;
+package rhx.leetcode.problems10to19;
 
-public class Problem19RemoveNthNodeFromEndOfList {
+import rhx.leetcode.ListNode;
+
+public class P19RemoveNthNodeFromEndOfList {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode toRemove = head;
         ListNode iterator = head;
+        ListNode toRemove = head;
         while(iterator.next != null) {
             if (n == 0) {
                 toRemove = toRemove.next;

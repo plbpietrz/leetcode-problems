@@ -1,6 +1,6 @@
-package rhx.leetcode;
+package rhx.leetcode.problems450to459;
 
-public class Problem457CircularArrayLoop {
+public class P457CircularArrayLoop {
 
     public boolean circularArrayLoop(int[] nums) {
 

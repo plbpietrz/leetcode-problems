@@ -1,17 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems0to9;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Problem3LongestSubstringTest {
+class P3LongestSubstringTest {
 
-    private Problem3LongestSubstring sut;
+    private P3LongestSubstring sut;
 
     @BeforeEach
     void setUp() {
-        sut = new Problem3LongestSubstring();
+        sut = new P3LongestSubstring();
     }
 
     @Test

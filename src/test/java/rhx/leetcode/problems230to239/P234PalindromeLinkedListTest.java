@@ -1,17 +1,18 @@
-package rhx.leetcode;
+package rhx.leetcode.problems230to239;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import rhx.leetcode.ListNode;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Problem234PalindromeLinkedListTest {
+class P234PalindromeLinkedListTest {
 
-    private Problem234PalindromeLinkedList sut;
+    private P234PalindromeLinkedList sut;
 
     @BeforeEach
     public void setup() {
-        sut = new Problem234PalindromeLinkedList();
+        sut = new P234PalindromeLinkedList();
     }
 
     @Test

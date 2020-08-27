@@ -1,10 +1,10 @@
-package rhx.leetcode;
+package rhx.leetcode.problems110to119;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Problem119PascalTriangle2 {
+public class P119PascalTriangle2 {
 
     public List<Integer> getRow(int rowIndex) {
         if (rowIndex == 0) return List.of(1);
@@ -13,7 +13,7 @@ public class Problem119PascalTriangle2 {
 
         for (int i = 0; i < rowIndex+1; ++i)
             arr[i] = binom(rowIndex, i);
-        return Arrays.stream(arr).mapToObj(Integer::valueOf).collect(Collectors.toList());
+        return Arrays.stream(arr).boxed().collect(Collectors.toList());
     }
     private int binom(int n, int k) {
         return (int)(fact(n)/(fact(k)*fact(n-k)));
@@ -29,7 +29,7 @@ public class Problem119PascalTriangle2 {
     }
 
     public static void main(String[] args) {
-        new Problem119PascalTriangle2().getRow(13);
+        new P119PascalTriangle2().getRow(13);
     }
 
 }

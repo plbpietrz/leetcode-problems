@@ -1,14 +1,12 @@
-package rhx.leetcode;
+package rhx.leetcode.problems1420to1429;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Problem1424DiagonalTraverse2 {
+public class P1424DiagonalTraverse2 {
 
     public int[] findDiagonalOrder1(List<List<Integer>> nums) {
         List<Integer> result = new ArrayList<>();

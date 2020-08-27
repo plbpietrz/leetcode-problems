@@ -1,9 +1,9 @@
-package rhx.leetcode;
+package rhx.leetcode.problems1090to1099;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Problem1091ShortesPathInBinaryMatrix {
+public class P1091ShortesPathInBinaryMatrix {
 
     public int shortestPathBinaryMatrix(int[][] grid) {
         boolean[][] visit = new boolean[grid.length][grid[0].length];
@@ -76,7 +76,7 @@ public class Problem1091ShortesPathInBinaryMatrix {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Problem1091ShortesPathInBinaryMatrix().shortestPathBinaryMatrix(
+        System.out.println(new P1091ShortesPathInBinaryMatrix().shortestPathBinaryMatrix(
                 new int[][]{{0, 1, 0, 0, 0}, {0, 1, 0, 1, 0}, {0, 1, 0, 1, 0}, {0, 1, 0, 1, 0}, {0, 0, 0, 1, 0}}
         ));
     }

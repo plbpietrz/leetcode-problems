@@ -1,11 +1,11 @@
-package rhx.leetcode;
+package rhx.leetcode.problems50to59;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class Problem56MergeIntervals {
+public class P56MergeIntervals {
 
     private static int START = 0;
     private static int END = 1;

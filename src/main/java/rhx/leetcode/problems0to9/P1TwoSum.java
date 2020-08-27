@@ -1,9 +1,9 @@
-package rhx.leetcode;
+package rhx.leetcode.problems0to9;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Problem1TwoSum {
+public class P1TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> seen = new HashMap<>();

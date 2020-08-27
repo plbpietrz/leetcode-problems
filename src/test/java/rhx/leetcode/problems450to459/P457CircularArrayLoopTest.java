@@ -1,17 +1,17 @@
-package rhx.leetcode;
+package rhx.leetcode.problems450to459;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Problem457CircularArrayLoopTest {
+class P457CircularArrayLoopTest {
 
-    private Problem457CircularArrayLoop sut;
+    private P457CircularArrayLoop sut;
 
     @BeforeEach
     public void setup() {
-        sut = new Problem457CircularArrayLoop();
+        sut = new P457CircularArrayLoop();
     }
 
     @Test

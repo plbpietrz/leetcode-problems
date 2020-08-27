@@ -1,6 +1,8 @@
-package rhx.leetcode;
+package rhx.leetcode.problems230to239;
 
-public class Problem234PalindromeLinkedList {
+import rhx.leetcode.ListNode;
+
+public class P234PalindromeLinkedList {
 
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) return true;
@@ -47,6 +49,6 @@ public class Problem234PalindromeLinkedList {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Problem234PalindromeLinkedList().isPalindrome(ListNode.of(1, 3, 2, 3, 1)));
+        System.out.println(new P234PalindromeLinkedList().isPalindrome(ListNode.of(1, 3, 2, 3, 1)));
     }
 }
