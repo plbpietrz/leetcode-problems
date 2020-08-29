@@ -5,16 +5,33 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    public TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public static TreeNode from(Integer[] binaryTree) {
+        if (binaryTree.length == 0)
+            return null;
+        TreeNode[] aux = new TreeNode[binaryTree.length];
+        aux[0] = new TreeNode(binaryTree[0]);
+        for (int i = 1; i < binaryTree.length; ++i) {
+            if (binaryTree[i] != null) {
+                aux[i] = new TreeNode(binaryTree[i]);
+                if (i % 2 == 0)
+                    aux[i / 2].left = aux[i];
+                else
+                    aux[i / 2].right = aux[i];
+            }
+        }
+        return aux[0];
     }
 }
