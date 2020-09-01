@@ -31,6 +31,36 @@ class P4MedianOfTwoSortedArraysTest {
 
     @Test
     public void test_4() {
-        assertEquals(2.d, sut.findMedianSortedArrays(new int[]{4}, new int[]{1, 2, 3, 5, 6}));
+        assertEquals(3.5d, sut.findMedianSortedArrays(new int[]{4}, new int[]{1, 2, 3, 5, 6}));
+    }
+
+    @Test
+    public void test_5() {
+        assertEquals(1.d, sut.findMedianSortedArrays(new int[]{}, new int[]{1}));
+    }
+
+    @Test
+    public void test_6() {
+        assertEquals(6.d, sut.findMedianSortedArrays(new int[]{4, 5, 6, 7, 9}, new int[]{}));
+    }
+
+    @Test
+    public void test_7() {
+        assertEquals(2.5d, sut.findMedianSortedArrays(new int[]{}, new int[]{1, 2, 3, 4}));
+    }
+
+    @Test
+    public void test_8() {
+        assertEquals(3.5d, sut.findMedianSortedArrays(new int[]{1, 2, 3, 5, 6}, new int[]{4}));
+    }
+
+    @Test
+    public void test_9() {
+        assertEquals(3.5d, sut.findMedianSortedArrays(new int[]{1, 2, 3, 4, 6}, new int[]{5}));
+    }
+
+    @Test
+    public void test_10() {
+        assertEquals(3.5d, sut.findMedianSortedArrays(new int[]{1, 2, 3, 4, 5, 6, 9, 10}, new int[]{7, 8}));
     }
 }

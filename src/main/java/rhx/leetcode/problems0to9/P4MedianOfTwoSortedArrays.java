@@ -3,47 +3,36 @@ package rhx.leetcode.problems0to9;
 public class P4MedianOfTwoSortedArrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int[] A = nums1.length > nums2.length ? nums1 : nums2;
-        int[] B = nums1.length > nums2.length ? nums2 : nums1;
-
-        if (A.length == 0 && B.length == 0) return -1;
-        if (A.length == 0) {
-            if (B.length % 2 == 0)
-                return (B[B.length / 2] + B[B.length / 2 - 1]) / 2.d;
-            else
-                return B[B.length / 2];
-        }
-        if (B.length == 0) {
-            if (A.length % 2 == 0)
-                return (A[A.length / 2] + A[A.length / 2 - 1]) / 2.d;
-            else
-                return A[A.length / 2];
+        if (nums1.length == 0 || nums2.length == 0) {
+            int[] tmp = nums1.length == 0 ? nums2 : nums1;
+            return (tmp.length % 2 == 0)
+                    ? (tmp[tmp.length / 2] + tmp[tmp.length / 2 - 1]) / 2.d
+                    : (tmp[tmp.length / 2]);
         }
 
-        int l = 0;
-        int r = A.length;
+        int low = 0;
+        int high = nums1.length;
 
-        while (l <= r) {
-            int i = (l + r) / 2;
-            int j = (A.length + B.length + 1) / 2 - i;
+        do {
+            int med1 = (high + low) / 2;
+            int med2 = (nums1.length + nums2.length + 1) / 2 - med1;
 
-            int maxLA = (i > 0 ? A[i - 1] : Integer.MIN_VALUE);
-            int minRA = (i < A.length ? A[i] : Integer.MAX_VALUE);
+            int maxL1 = med1 > 0 ? nums1[med1-1] : Integer.MIN_VALUE;
+            int minR1 = med1 < nums1.length ? nums1[med1] : Integer.MAX_VALUE;
+            int maxL2 = med2 > 0 ? nums2[med2-1] : Integer.MIN_VALUE;
+            int minR2 = med2 < nums2.length ? nums2[med2] : Integer.MAX_VALUE;
 
-            int maxLB = (j > 0 ? B[j - 1] : Integer.MIN_VALUE);
-            int minRB = (j < B.length ? B[j] : Integer.MAX_VALUE);
-
-            if (maxLA <= minRB && maxLB <= minRA) {
-                if ((A.length + B.length) % 2 == 0)
-                    return (Math.max(maxLA, maxLB) + Math.min(minRA, minRB)) / 2.d;
-                else
-                    return Math.max(maxLA, maxLB);
-            } else if (maxLA > minRB) {
-                r = i - 1;
+            if (maxL1 > minR2) {
+                high = med1 - 1;
+            } else if (minR1 < maxL2) {
+                low = med1 + 1;
             } else {
-                l = i + 1;
+                return (nums1.length + nums2.length) % 2 == 0
+                        ? (Math.max(maxL1, maxL2) + Math.min(minR1, minR2)) / 2.d
+                        : Math.max(maxL1, maxL2);
             }
-        }
+
+        } while (low <= high);
 
         return -1;
     }
