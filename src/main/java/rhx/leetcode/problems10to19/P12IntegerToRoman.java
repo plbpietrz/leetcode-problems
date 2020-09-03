@@ -19,17 +19,17 @@ public class P12IntegerToRoman {
         return numeral;
     }
 
-    private String format(int n, int div) {
+    private String format(int n, int dep) {
         if (n < 4) {
-            return lookup[div][0].repeat(n);
+            return lookup[dep][0].repeat(n);
         } else if (n == 4) {
-            return lookup[div][0] + lookup[div][1];
+            return lookup[dep][0] + lookup[dep][1];
         } else if (n == 5) {
-            return lookup[div][1];
+            return lookup[dep][1];
         } else if (n < 9) {
-            return lookup[div][1] + lookup[div][0].repeat(n - 5);
+            return lookup[dep][1] + lookup[dep][0].repeat(n - 5);
         } else {
-            return lookup[div][0] + lookup[div][2];
+            return lookup[dep][0] + lookup[dep][2];
         }
     }
 
