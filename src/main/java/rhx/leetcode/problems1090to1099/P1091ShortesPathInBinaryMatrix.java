@@ -23,10 +23,8 @@ public class P1091ShortesPathInBinaryMatrix {
         while (!queue.isEmpty()) {
             Point p = queue.poll();
             v[p.r][p.c] = true;
-            for (Point n : p.neighbors(grid)) {
-                if (!v[n.r][n.c]) {
-                    queue.offer(n);
-                }
+            for (Point n : p.neighbors(grid, v)) {
+                queue.offer(n);
                 if ((pt[p.r][p.c] + 1 < pt[n.r][n.c]) || pt[n.r][n.c] == 0)
                     pt[n.r][n.c] = pt[p.r][p.c] + 1;
             }
@@ -48,24 +46,25 @@ public class P1091ShortesPathInBinaryMatrix {
             this.c = c;
         }
 
-        public List<Point> neighbors(int[][] grid) {
+        public List<Point> neighbors(int[][] grid, boolean[][] visit) {
             List<Point> result = new ArrayList<>();
             for (int[] n : NEIGHBOURS) {
                 int r = this.r + n[0];
                 int c = this.c + n[1];
-                if (isValid(r, c, grid))
+                if (isValid(r, c, grid, visit))
                     result.add(new Point(r, c));
             }
             return result;
         }
 
-        private boolean isValid(int r, int c, int[][] grid) {
+        private boolean isValid(int r, int c, int[][] grid, boolean[][] visit) {
             int R = grid.length;
             int C = grid[0].length;
             return r > -1 &&
                     r < R &&
                     c > -1 &&
                     c < C &&
+                    visit[r][c] == false &&
                     grid[r][c] != 1;
         }
 
