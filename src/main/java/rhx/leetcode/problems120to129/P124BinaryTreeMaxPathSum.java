@@ -7,23 +7,26 @@ import java.util.Queue;
 
 public class P124BinaryTreeMaxPathSum {
 
+    private int max = Integer.MIN_VALUE;
+
     public int maxPathSum(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        int sum = 0;
-        int max = 0;
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            sum += node.val;
-            if (node.right != null) {
-                queue.offer(node.right);
-            } else {
-                max = Math.max(sum , max);
-                sum -= node.val;
-                if (node.left != null)
-                    queue.offer(node.left);
-            }
-        }
+        sum(root);
         return max;
+    }
+
+    int sum(TreeNode node) {
+        int left = 0, right = 0;
+        if (node.right != null) {
+            right = sum(node.right);
+        }
+
+        if (node.left != null) {
+            left = sum(node.left);
+        }
+
+        int sum = node.val + left + right;
+        max = Math.max(max, sum);
+        sum = node.val + Math.max(left, right);
+        return sum > 0 ? sum : 0;
     }
 }
