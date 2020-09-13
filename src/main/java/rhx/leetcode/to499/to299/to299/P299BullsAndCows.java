@@ -2,6 +2,8 @@ package rhx.leetcode.to499.to299.to299;
 
 public class P299BullsAndCows {
 
+    public static final int ASCII_OFFSET = 48;
+
     public String getHint(String secret, String guess) {
         int[] sFreq = new int[10];
         int[] gFreq = new int[10];
@@ -14,8 +16,8 @@ public class P299BullsAndCows {
             if (sArr[i] == gArr[i]) {
                 exact += 1;
             } else {
-                sFreq[sArr[i] - 48] += 1;
-                gFreq[gArr[i] - 48] += 1;
+                sFreq[sArr[i] - ASCII_OFFSET] += 1;
+                gFreq[gArr[i] - ASCII_OFFSET] += 1;
             }
         }
 
