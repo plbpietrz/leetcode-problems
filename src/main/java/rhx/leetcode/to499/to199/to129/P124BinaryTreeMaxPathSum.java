@@ -24,6 +24,6 @@ public class P124BinaryTreeMaxPathSum {
         int sum = node.val + left + right;
         max = Math.max(max, sum);
         sum = node.val + Math.max(left, right);
-        return sum > 0 ? sum : 0;
+        return Math.max(sum, 0);
     }
 }
