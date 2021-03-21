@@ -5,32 +5,19 @@ public class P123BuyAndSellStockIII {
     public int maxProfit(int... prices) {
         if (prices.length == 0 || prices.length == 1) return 0;
 
-        int min = prices[0], max = prices[0], best = 0, secondBest = 0;
-        for (int i = 1; i < prices.length; ++i) {
-            if (max > prices[i]) {
-                int profit = max - min;
-                if (profit > best) {
-                    secondBest = best;
-                    best = profit;
-                } else if (profit > secondBest) {
-                    secondBest = profit;
-                }
-                min = prices[i];
-            }
-            max = prices[i];
+        int firstTradeMin = Integer.MAX_VALUE, firstTradeProfit = 0, secondTradeMin = Integer.MAX_VALUE, secondTradeProfit = 0;
+        for (int p : prices) {
+            // calculate the first trade minimum price
+            firstTradeMin = Math.min(firstTradeMin, p);
+            // calculated the first trade profit based on lowest price seen so far
+            firstTradeProfit = Math.max(firstTradeProfit, p - firstTradeMin);
+            // find the second trade minimum as the lowest price seen so far decreased by the profit from the first trade
+            secondTradeMin = Math.min(secondTradeMin, p - firstTradeProfit);
+            // find the second trade profit as the diff between current price and the lowest price seen so far
+            secondTradeProfit = Math.max(secondTradeProfit, p - secondTradeMin);
         }
 
-        if (max > min) {
-            int profit = max - min;
-            if (profit > best) {
-                secondBest = best;
-                best = profit;
-            } else if (profit > secondBest) {
-                secondBest = profit;
-            }
-        }
-
-        return best + secondBest;
+        return secondTradeProfit;
     }
 
 }
