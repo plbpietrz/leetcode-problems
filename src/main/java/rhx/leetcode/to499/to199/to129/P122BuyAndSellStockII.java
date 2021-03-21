@@ -4,17 +4,12 @@ public class P122BuyAndSellStockII {
 
     public int maxProfit(int... prices) {
         if (prices.length == 0) return 0;
-        int min = prices[0], max = prices[0], profit = 0;
-        for (int i = 1; i< prices.length; ++i) {
-            if (max > prices[i]) {
-                profit += (max - min);
-                min = prices[i];
-            }
-            max = prices[i];
+        int withStock = Integer.MIN_VALUE, withoutStock = 0;
+        for (int price : prices) {
+            withStock = Math.max(withStock, withoutStock - price);
+            withoutStock = Math.max(withoutStock, withStock + price);
         }
-        if (max > min)
-            profit += (max - min);
-        return profit;
+        return withoutStock;
     }
 
 }
