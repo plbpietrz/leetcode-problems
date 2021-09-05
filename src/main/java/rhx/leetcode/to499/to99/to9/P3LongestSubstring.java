@@ -8,7 +8,7 @@ public class P3LongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
         int result = 0;
-        int[] lastIndexOfChar = new int[256];    //lets hope input is only ascii
+        int[] lastIndexOfChar = new int[256];    // let's hope input is only ascii
         Arrays.fill(lastIndexOfChar, -1);
 
         int x = 0;
