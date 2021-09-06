@@ -41,7 +41,7 @@ class P416PartitionEqualSubsetSumTest {
 
     @Test
     void test_6() {
-        assertTrue(sut.canPartition(new int[]{
+        assertFalse(sut.canPartition(new int[]{
                 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
                 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
                 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
