@@ -39,4 +39,9 @@ class P1438LongestContinuousSubarrayWithAbsoluteDiffTest {
         assertEquals(8, sut.longestSubarray(new int[]{8, 7, 4, 2, 8, 1, 7, 7}, 8));
     }
 
+    @Test
+    void test_6() {
+        assertEquals(1, sut.longestSubarray(new int[]{8}, 10));
+    }
+
 }
