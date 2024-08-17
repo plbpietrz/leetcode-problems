@@ -26,7 +26,7 @@ class P421MaximumXOROfTwoNumbersInArrayTest {
 
     @Test
     void test_3() {
-        assertEquals(6, sut.findMaximumXOR(2147483647, 2147483646));
+        assertEquals(1, sut.findMaximumXOR(2147483647, 2147483646));
     }
 
     @Test
